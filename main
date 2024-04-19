@@ -1,0 +1,83 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+
+const useStyles = makeStyles((theme) => ({
+  header: {
+    backgroundColor: '#333',
+    color: '#fff',
+    padding: theme.spacing(2),
+    textAlign: 'center',
+  },
+  section: {
+    padding: theme.spacing(6, 2),
+    textAlign: 'center',
+  },
+  footer: {
+    backgroundColor: '#333',
+    color: '#fff',
+    textAlign: 'center',
+    padding: theme.spacing(2),
+    position: 'fixed',
+    bottom: 0,
+    width: '100%',
+  },
+}));
+
+export default function TravelBlog() {
+  const classes = useStyles();
+
+  return (
+    <div>
+      <header className={classes.header}>
+        <Typography variant="h3">Welcome to Wanderlust Adventures!</Typography>
+      </header>
+
+      <Container maxWidth="md" className={classes.section}>
+        <Typography variant="h4">Explore Your Next Destination</Typography>
+        <Typography variant="body1">
+          Discover breathtaking destinations waiting for you! From the snowy peaks of the Swiss Alps to the vibrant streets of Tokyo, we've got your next adventure covered. Let your wanderlust guide you to your dream getaway.
+        </Typography>
+      </Container>
+
+      <Container maxWidth="md" className={classes.section}>
+        <Typography variant="h4">Tailored Travel Experiences</Typography>
+        <Typography variant="body1">
+          At Wanderlust Adventures, we believe in personalized travel. Our expert team crafts custom itineraries just for you, ensuring every moment of your journey is unforgettable. Whether you seek relaxation on a secluded beach or thrill-seeking adventures in the jungle, we'll create the perfect trip for you.
+        </Typography>
+      </Container>
+
+      <Container maxWidth="md" className={classes.section}>
+        <Typography variant="h4">Insider Tips and Recommendations</Typography>
+        <Typography variant="body1">
+          Get insider knowledge from seasoned travelers! Explore our blog for expert tips, hidden gems, and must-try experiences at each destination. From the best local cuisine to off-the-beaten-path attractions, we'll help you make the most of your adventure.
+        </Typography>
+      </Container>
+
+      <Container maxWidth="md" className={classes.section}>
+        <Typography variant="h4">Wanderlust Community</Typography>
+        <Typography variant="body1">
+          Join our vibrant community of travelers! Share your experiences, connect with fellow adventurers, and inspire others with your travel tales. Whether you're a solo explorer or a family of globetrotters, you'll find a warm welcome here.
+        </Typography>
+      </Container>
+
+      <Container maxWidth="md" className={classes.section}>
+        <Typography variant="h4">Start Your Journey Today</Typography>
+        <Typography variant="body1">
+          Ready to embark on your next adventure? Contact us to start planning your dream getaway! Our dedicated team is here to turn your travel dreams into reality. Let's make memories that last a lifetime together.
+        </Typography>
+      </Container>
+
+      <footer className={classes.footer}>
+        <Typography variant="body1">Follow us on social media for more travel inspiration and updates!</Typography>
+        {/* Add your social media icons and links here */}
+        {/* Replace the href="#" with your actual social media links */}
+        <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+        <a href="#"><img src="facebook.png" alt="Facebook" /></a>
+        <a href="#"><img src="twitter.png" alt="Twitter" /></a>
+        <a href="#"><img src="pinterest.png" alt="Pinterest" /></a>
+      </footer>
+    </div>
+  );
+}
